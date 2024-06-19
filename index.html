@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicholas Loperena</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.typekit.net/ofz2nnp.css">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_K1PoFs8pB2YVWStDxrUls");
+    })();
+  </script>
+</head>
+
+<body>
+  <section id="landing-page" onmousemove="moveBackground(event)">
+    <nav>
+      <figure>
+        <img id="personal-logo" src="./assets/personalBrandLogo.png" alt="">
+      </figure>
+      <ul class="nav__link--list">
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">About</a>
+        </li>
+        <li class="nav__link">
+          <a href="#projects" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Projects</a>
+        </li>
+        <li class="nav__link" onclick="toggleModal()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          ">Contact</a>
+        </li>
+        <li class="nav__link click" onclick="toggleContrast()">
+          <a href="#" class="
+            nav__link--anchor
+            link__hover-effect
+            link__hover-effect--black
+          "><i class="fas fa-adjust"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="header__content">
+        <h1 class="title">Hey</h1>
+        <h1 class="title orange">I'm Nico</h1>
+        <p class="header__para">
+          I'm a <b class="orange">Frontend Software Engineer</b> with a background in tech, design and marketing. I like
+          to be creative build cool things! 😊🙌
+          <br>
+          Here's a bit more <b class="orange click" onclick="toggleModal()">about me</b>.
+        </p>
+        <div class="social__list">
+          <a href="https://www.linkedin.com/in/nicholas-loperena-022813185/" target="_blank" class="social__link click">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Nloperena" target="_blank" class="social__link click">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" target="_blank" class="social__link click">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fas fa-envelope"></i>
+      </button>
+    </a>
+    <a href="#projects" class="scroll">
+      <div class="scroll__icon click"></div>
+    </a>
+    <div class="modal">
+      <div class="modal__half modal__about">
+        <h3 class="modal__title modal__title--about">About Me</h3>
+        <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer and Designer</h4>
+        <p class="modal__para">
+          I'm a 27-year-old American <b class="orange">frontend software engineer</b> with experience in developing
+          websites, marketing, and designing for <b class="orange">small businesses</b> and <b class="orange">my local
+            community</b>.
+          <br>
+          <br>
+          Currently, I work as the director of marketing for <b class="orange">VITO Fryfilter Inc.</b>. I am always
+          looking to get creative and solve problems.
+          <br>
+          <br>
+          I specialize in <b class="orange">JavaScript</b> and <b class="orange">React</b>, focusing on <b
+            class="orange">Front-end Development</b> and <b class="orange">Design</b> to create seamless and visually
+          appealing user experiences.
+        </p>
+
+        <div class="modal__languages">
+          <figure class="modal__language">
+            <img class="modal__language--img"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+              alt="">
+            <span class="language__name">HTML</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+              alt="">
+            <span class="language__name">CSS</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+              alt="">
+            <span class="language__name">JavaScript</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+              alt="">
+            <span class="language__name">React</span>
+          </figure>
+
+
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./assets/adobe-photoshop.png" alt="">
+            <span class="language__name">Photoshop</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./assets/adobe-illustrator.png" alt="">
+            <span class="language__name">Illustrator</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./assets/adobe-premiere-pro.png" alt="">
+            <span class="language__name">Premier Pro</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="./assets/adobe-after-effects.png" alt="">
+            <span class="language__name">After Effects</span>
+          </figure>
+        </div>
+      </div>
+      <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+        <h3 class="modal__title modal__title--contact">
+          Ready to Chat?
+        </h3>
+        <h3 class="modal__sub-title modal__sub-title--contact">
+          I am currently exploring new career opportunities and am eager to bring my skills and experience to an
+          a new team. If you're looking for a dedicated professional ready to make a significant impact, please
+          don't hesitate to reach out. Let's discuss how I can contribute to your success.
+        </h3>
+        <form id="contact__form" onsubmit="contact(event)">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name="user_name" type="text" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Email</label>
+            <input class="input" name="user_email" type="email" required></input>
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="input" name="message" type="text" required></textarea>
+          </div>
+          <button id="contact__submit" class="form__submit">
+            Send it my way
+          </button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for the message! Looking forward to speaking to you soon.
+        </div>
+      </div>
+    </div>
+    <img src="./assets/semi circle.svg" class="shape shape--0">
+    <img src="./assets/circle.svg" class="shape shape--1">
+    <img src="./assets/squiggly.svg" class="shape shape--2">
+    <img src="./assets/circle.svg" class="shape shape--3">
+    <img src="./assets/triangle.svg" class="shape shape--4">
+    <img src="./assets/circle.svg" class="shape shape--5">
+    <img src="./assets/squiggly.svg" class="shape shape--6">
+    <img src="./assets/circle.svg" class="shape shape--7">
+    <img src="./assets/semi circle.svg" class="shape shape--8">
+  </section>
+  <section id="projects">
+    <div class="container">
+      <div class="row">
+        <h1 class="section__title">
+          Here are some of my <span class="orange">projects</span>
+        </h1>
+        <ul class="project__list">
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/google mockup.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Google In-Store
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript, Vue, Vuex
+                </h4>
+                <p class="project__description--para">
+                  Google In-Store is a platform allowing Google retail employees to report any issues with their
+                  store products. Once an issue is reported, it is posted to an API which populates a separate
+                  platform's frontend - which is used by Google's vendors to fix the issue as soon as possible. I was
+                  the sole
+                  front-end developer of this application.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://googleinstore.com.au/" class="project__description--link">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/Frontend Simplified.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Frontend Simplified
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JavaScript, Vue, Vuex, Nuxt, Firebase
+                </h4>
+                <p class="project__description--para">
+                  Frontend Simplified is a side project built to not only teach people how to code, but teach them how
+                  to get job ready in the quickest way possible. Users of this platform can join my 2,300+ member
+                  community
+                  including engineers from Google, Canva, Atlassian, Apple, Microsoft and Salesforce.
+                  The entire platform and courses was built by myself
+                  and I'm
+                  planning to
+                  release the MVP in the next few weeks.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/Eportfolio YT.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  E-Portfolio YouTube Tutorial
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS
+                </h4>
+                <p class="project__description--para">
+                  E-Portfolio built to help my social media followers learn basic CSS properties, layout and best
+                  practises -
+                  along with including tips along the way to help them land their first job.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://www.youtube.com/watch?v=C8BlRjB3vYI" target="_blank"
+                    class="project__description--link">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                  <a href="https://githuh.com" target="_blank" class="project__description--link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://davidbr4gg.github.io/" target="_blank" class="project__description--link">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <a href="#" class="footer__anchor">
+          <figure class="footer__logo">
+            <img src="./assets/personalBrandLogo-white.png" class="footer__logo--img" alt="">
+          </figure>
+          <span class="footer__logo--popper">
+            Top
+            <i class="fas fa-arrow-up"></i>
+          </span>
+        </a>
+        <div class="footer__social--list">
+          <a href="https://github.com/Nloperena" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/nicholas-loperena-022813185/" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            LinkedIn
+          </a>
+          <a href="#" onclick="toggleModal()" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Contact
+          </a>
+          <a href="./assets/NicholasLoperenaResume.pdf" target="_blank" class="
+          footer__social--link
+          link__hover-effect
+          link__hover-effect--white
+        ">
+            Resume
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2024 Nicholas Loperena</div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
