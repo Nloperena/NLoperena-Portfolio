@@ -26,16 +26,16 @@ function toggleContrast() {
 }
 
 function contact(event) {
-  event.preventDefault();
+  event.preventDefault(); //prevents page from refreshing after submitting form
   const loading = document.querySelector(".modal__overlay--loading");
   const success = document.querySelector(".modal__overlay--success");
   loading.classList += " modal__overlay--visible";
   emailjs
     .sendForm(
-      "service_80ih0if",
-      "template_d9refyl",
+      "portfoliowebsite",
+      "template_mh5jzar",
       event.target,
-      "user_K1PoFs8pB2YVWStDxrUls"
+      "18B24lJRY2DbsSYlL"
     )
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
@@ -44,7 +44,7 @@ function contact(event) {
     .catch(() => {
       loading.classList.remove("modal__overlay--visible");
       alert(
-        "The email service is temporarily unavailable. Please contact me directly on email@email.com"
+        "The email service is temporarily unavailable. Please contact me directly on nicholasloperena@gmail.com"
       );
     });
 }
@@ -57,3 +57,9 @@ function toggleModal() {
   isModalOpen = true;
   document.body.classList += " modal--open";
 }
+
+//Tempalte ID: template_ycceepr
+// Public key: 18B24lJRY2DbsSYlL
+// ServiceID: portfoliowebsite
+
+
