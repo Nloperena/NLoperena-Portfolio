@@ -741,4 +741,16 @@ footer {
   .modal__half {
     padding: 40px;
   }
+  
+}
+
+#websiteProjects {
+  background-color: #ffffff;
+}
+
+#emailProjects {
+  background-color: #daecff;
+}
+#designProjects {
+  background-color: #ffffff;
 }
