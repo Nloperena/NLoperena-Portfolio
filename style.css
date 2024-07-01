@@ -7,6 +7,7 @@
  
 }
 
+
 html {
   scroll-behavior: smooth;
 }
@@ -91,6 +92,56 @@ input:focus, textarea:focus {
   transform: scale(0.8);
 }
 
+
+#how-i-can-help {
+  text-align: center;
+}
+
+.section__list {
+  margin-bottom: 20px;
+  font-size: 48px;
+  font-family: 'anziano', sans-serif;
+}
+
+.section__paragraph {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'nobel', sans-serif;
+}
+
+.section__list--item {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 16px;
+  font-family: 'nobel', sans-serif;
+}
+
+.section__list--item span {
+  font-family: 'anziano', sans-serif;
+  font-size: 28px;
+}
+
+.section__list ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.scroll__link {
+  background-color: #7549f0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  font-family: 'nobel', sans-serif;
+}
+
+
 .title {
   font-size: 120px;
   margin-bottom: 12px;
@@ -155,6 +206,14 @@ nav,
 {
   color: white;
 }
+.dark-theme #how-i-can-help,
+.dark-theme .section__list,
+.dark-theme .section__paragraph,
+.dark-theme .section__list--item,
+.dark-theme .section__list--item span {
+    color: white; 
+}
+
 .dark-theme section {
   background-color: #0a001b;
 }
@@ -745,12 +804,11 @@ footer {
 }
 
 #websiteProjects {
-  background-color: #ffffff;
 }
 
 #emailProjects {
-  background-color: #daecff;
+  
 }
 #designProjects {
-  background-color: #ffffff;
+  
 }
