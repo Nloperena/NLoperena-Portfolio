@@ -89,8 +89,8 @@ section {
 }
 
 .service-card p {
-  font-size: 14px;
-  color: #666;
+  font-size: 140px;
+  color: #000000;
 }
 
 
@@ -205,7 +205,7 @@ textarea:focus {
 }
 
 .service-card {
-  background-color: #fff;
+  background-color: #ffffff00;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   padding: 5rem;
@@ -225,7 +225,7 @@ textarea:focus {
   height: 80px;
   line-height: 80px; /* Centers the emoji vertically */
   border-radius: 50%;
-  background-color: #f0f0f0;
+  background-color: #9f51ff;
   margin-bottom: 20px;
 }
 
@@ -240,7 +240,7 @@ textarea:focus {
 }
 
 .service-card p {
-  font-size: 16px;
+  font-size: 20px;
   color: #666;
   flex-grow: 1; /* Allows the paragraph to fill the space */
   margin: 0 0 20px 0; /* Ensures spacing at the bottom */
@@ -396,7 +396,8 @@ nav,
 .dark-theme .section__sub-title,
 .dark-theme .nav__link--anchor,
 .dark-theme .fa-adjust,
-.dark-theme .header__para {
+.dark-theme .header__para,
+.dark-theme .service-card p {
   color: white;
 }
 
