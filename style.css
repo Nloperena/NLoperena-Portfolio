@@ -246,17 +246,7 @@ textarea:focus {
   margin: 0 0 20px 0; /* Ensures spacing at the bottom */
 }
 
-@media (max-width: 768px) {
-  .card-container {
-      flex-direction: column;
-  }
 
-  .service-card {
-      width: 80%; /* Adapt width on smaller screens for better fit */
-      height: auto; /* Makes height responsive to content */
-      padding-bottom: 40px; /* Extra padding for readability */
-  }
-}
 
 
 .container {
@@ -569,7 +559,7 @@ section {
   border: none;
   background-color: #242424;
   color: white;
-  position: fixed;
+  position: absolute;
   bottom: 32px;
   right: 40px;
   z-index: 100;
@@ -1041,7 +1031,7 @@ footer {
   left: 80vw;
 }
 
-/* ADDED AFTER TUTORIAL */
+
 .footer__logo--popper {
   position: absolute;
   right: 0;
@@ -1061,50 +1051,108 @@ footer {
   opacity: 1;
 }
 
-/* Small phones, tablets, large smart phones */
+
+/* Combined media queries */
+
+/* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
   .title {
-    font-size: 80px;
+    font-size: 60px; /* Decrease font size */
   }
 
-  .service-card {
-    flex-basis: 100%;
-    /* one card per row on smaller screens */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: static; /* Change to static to prevent absolute positioning issues */
+    transform: none; /* Remove transform */
+    padding: 20px; /* Add padding for spacing */
+    gap: 20px; /* Add gap between content */
+  }
+
+  .header__content {
+    order: 2; /* Content appears below the image */
+  }
+
+  .header__image {
+    order: 1; /* Image appears above the content */
+    margin-bottom: 20px; /* Add space between image and content */
+    width: 100%; /* Ensure it doesn't exceed container width */
+    text-align: center;
+  }
+
+  .header__image img {
+    max-width: 200px; /* Adjust image size */
+    width: 100%; /* Ensure the image scales with container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Keep the image round */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
   }
 
   .header__para {
-    font-size: 20px;
+    font-size: 18px; /* Decrease font size */
+    text-align: left;
+  }
+
+  .service-card {
+    flex-basis: 100%; /* one card per row on smaller screens */
   }
 
   section {
     padding: 15px;
     margin: 15px 0;
   }
+
+  .section__title {
+    font-size: 36px; /* Adjust the font size for the section title */
+    text-align: center; /* Center the title text */
+  }
+
+  .section__paragraph {
+    font-size: 16px; /* Adjust the font size for the paragraph */
+    text-align: center; /* Center the paragraph text */
+    padding: 0 15px; /* Add padding for better readability */
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack the cards vertically */
+    align-items: center; /* Center the cards */
+  }
+
+  .service-card {
+    width: 80%; /* Adjust the width of the cards */
+    margin-bottom: 20px; /* Add space between the cards */
+  }
+
+  .service-card h3 {
+    font-size: 24px; /* Adjust the font size of the card titles */
+  }
+
+  .service-card p {
+    font-size: 14px; /* Adjust the font size of the card text */
+  }
+
+  .shape {
+    display: none; /* Hide shapes for better readability */
+  }
 }
 
-.modal {
-  top: 0;
-  left: 0;
-  transform: none;
-  height: auto;
-  width: 100%;
-  flex-direction: column-reverse;
-  border-radius: 0;
-}
-
-.modal__half {
-  width: 100%;
-}
-}
-
-/* Small phones */
+/* Small devices (smartphones, 480px and down) */
 @media (max-width: 480px) {
   .title {
-    font-size: 52px;
+    font-size: 40px; /* Decrease font size */
   }
 
   .header__para {
-    font-size: 18px;
+    font-size: 16px; /* Decrease font size */
+    text-align: left;
+  }
+
+  .header__image img {
+    max-width: 200px; /* Adjust image size */
+    width: 100%; /* Ensure the image scales with container */
+    height: auto; /* Maintain aspect ratio */
   }
 
   .nav__link:first-child {
@@ -1130,10 +1178,281 @@ footer {
     padding: 40px;
   }
 
+  .section__title {
+    font-size: 28px; /* Adjust the font size for the section title */
+  }
+
+  .section__paragraph {
+    font-size: 14px; /* Adjust the font size for the paragraph */
+  }
+
+  .service-card {
+    width: 100%; /* Full width for the cards */
+    padding: 10px; /* Add padding for better readability */
+  }
+
+  .service-card h3 {
+    font-size: 20px; /* Adjust the font size of the card titles */
+  }
+
+  .service-card p {
+    font-size: 12px; /* Adjust the font size of the card text */
+  }
+
+  .shape {
+    display: none; /* Hide shapes for better readability */
+  }
 }
 
-#websiteProjects {}
+/* Very small devices (smartphones, less than 360px) */
+@media (max-width: 360px) {
+  .title {
+    font-size: 30px; /* Decrease font size */
+  }
 
-#emailProjects {}
+  .header__para {
+    font-size: 14px; /* Decrease font size */
+    text-align: left;
+  }
 
-#designProjects {}
+  .header__image img {
+    max-width: 150px; /* Further adjust image size */
+    width: 100%; /* Ensure the image scales with container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .section__title {
+    font-size: 24px; /* Adjust the font size for the section title */
+  }
+
+  .section__paragraph {
+    font-size: 12px; /* Adjust the font size for the paragraph */
+  }
+
+  .service-card {
+    width: 100%; /* Full width for the cards */
+    padding: 5px; /* Add padding for better readability */
+  }
+
+  .service-card h3 {
+    font-size: 18px; /* Adjust the font size of the card titles */
+  }
+
+  .service-card p {
+    font-size: 10px; /* Adjust the font size of the card text */
+  }
+
+  .shape {
+    display: none; /* Hide shapes for better readability */
+  }
+}
+/* Combined media queries */
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 60px; /* Decrease font size */
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: static; /* Change to static to prevent absolute positioning issues */
+    transform: none; /* Remove transform */
+    padding: 20px; /* Add padding for spacing */
+    gap: 20px; /* Add gap between content */
+  }
+
+  .header__content {
+    order: 2; /* Content appears below the image */
+  }
+
+  .header__image {
+    order: 1; /* Image appears above the content */
+    margin-bottom: 20px; /* Add space between image and content */
+    width: 100%; /* Ensure it doesn't exceed container width */
+    text-align: center;
+  }
+
+  .header__image img {
+    max-width: 200px; /* Adjust image size */
+    width: 100%; /* Ensure the image scales with container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Keep the image round */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
+  }
+
+  .header__para {
+    font-size: 18px; /* Decrease font size */
+    text-align: left;
+  }
+
+  .service-card {
+    flex-basis: 100%; /* one card per row on smaller screens */
+  }
+
+  section {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .section__title {
+    font-size: 36px; /* Adjust the font size for the section title */
+    text-align: center; /* Center the title text */
+  }
+
+  .section__paragraph {
+    font-size: 16px; /* Adjust the font size for the paragraph */
+    text-align: center; /* Center the paragraph text */
+    padding: 0 15px; /* Add padding for better readability */
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack the cards vertically */
+    align-items: center; /* Center the cards */
+  }
+
+  .service-card {
+    width: 80%; /* Adjust the width of the cards */
+    margin-bottom: 20px; /* Add space between the cards */
+  }
+
+  .service-card h3 {
+    font-size: 24px; /* Adjust the font size of the card titles */
+  }
+
+  .service-card p {
+    font-size: 14px; /* Adjust the font size of the card text */
+  }
+
+  .shape {
+    display: none; /* Hide shapes for better readability */
+  }
+}
+
+/* Small devices (smartphones, 480px and down) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 40px; /* Decrease font size */
+  }
+
+  .header__para {
+    font-size: 16px; /* Decrease font size */
+    text-align: left;
+  }
+
+  .header__image img {
+    max-width: 200px; /* Adjust image size */
+    width: 100%; /* Ensure the image scales with container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .nav__link:first-child {
+    display: none;
+  }
+
+  .project__description--para {
+    display: none;
+  }
+
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .project__description--sub-title {
+    margin-bottom: 8px;
+  }
+
+  .modal__half {
+    padding: 40px;
+  }
+
+  .section__title {
+    font-size: 28px; /* Adjust the font size for the section title */
+  }
+
+  .section__paragraph {
+    font-size: 14px; /* Adjust the font size for the paragraph */
+  }
+
+  .service-card {
+    width: 100%; /* Full width for the cards */
+    padding: 10px; /* Add padding for better readability */
+  }
+
+  .service-card h3 {
+    font-size: 20px; /* Adjust the font size of the card titles */
+  }
+
+  .service-card p {
+    font-size: 12px; /* Adjust the font size of the card text */
+  }
+
+  .shape {
+    display: none; /* Hide shapes for better readability */
+  }
+}
+
+/* Very small devices (smartphones, less than 360px) */
+@media (max-width: 360px) {
+  .title {
+    font-size: 30px; /* Decrease font size */
+  }
+
+  .header__para {
+    font-size: 14px; /* Decrease font size */
+    text-align: left;
+  }
+
+  .header__image img {
+    max-width: 150px; /* Further adjust image size */
+    width: 100%; /* Ensure the image scales with container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .section__title {
+    font-size: 24px; /* Adjust the font size for the section title */
+  }
+
+  .section__paragraph {
+    font-size: 12px; /* Adjust the font size for the paragraph */
+  }
+
+  .service-card {
+    width: 100%; /* Full width for the cards */
+    padding: 5px; /* Add padding for better readability */
+  }
+
+  .service-card h3 {
+    font-size: 18px; /* Adjust the font size of the card titles */
+  }
+
+  .service-card p {
+    font-size: 10px; /* Adjust the font size of the card text */
+  }
+
+  .shape {
+    display: none; /* Hide shapes for better readability */
+  }
+}
+
+/* Make mail button sticky */
+.mail__btn {
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #242424;
+  color: white;
+  position: fixed; /* Change to fixed */
+  bottom: 32px; /* Position it at the bottom */
+  right: 40px; /* Position it on the right */
+  z-index: 100; /* Make sure it stays on top of other elements */
+  box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.28);
+}
