@@ -90,7 +90,7 @@ section {
 }
 
 .service-card p {
-  font-size: 140px;
+  font-size: 15px;
   color: #000000;
 }
 
@@ -242,7 +242,7 @@ textarea:focus {
 }
 
 .service-card p {
-  font-size: 20px;
+  font-size: 15px;
   color: #666;
   flex-grow: 1; /* Allows the paragraph to fill the space */
   margin: 0 0 20px 0; /* Ensures spacing at the bottom */
@@ -1064,6 +1064,31 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
+  .modal {
+    width: 90%; /* Ensure modal width is within viewport */
+    max-width: 90%; /* Ensure modal width is within viewport */
+    height: auto; /* Adjust height to auto */
+    top: 10%; /* Adjust top to bring modal into view */
+    transform: translate(-50%, 0); /* Adjust translate to avoid cutting off the top */
+    flex-direction: column; /* Stack modal halves vertically */
+  }
+
+  .modal__half {
+    width: 100%; /* Full width for modal halves */
+    padding: 20px; /* Adjust padding */
+    transform: none; /* Reset transform */
+  }
+
+  .modal__about,
+  .modal__contact {
+    transform: none; /* Reset transform */
+  }
+
+  .modal--open .modal__about,
+  .modal--open .modal__contact {
+    transform: none; /* Reset transform */
+  }
+
   .title {
     font-size: 60px; /* Decrease font size */
   }
@@ -1109,7 +1134,7 @@ footer {
 
   section {
     padding: 15px;
-    margin: 15px 15px;
+    margin: 15px;
   }
 
   .section__title {
@@ -1138,7 +1163,7 @@ footer {
   }
 
   .service-card p {
-    font-size: 14px; /* Adjust the font size of the card text */
+    font-size: 24px; /* Adjust the font size of the card text */
   }
 
   .shape {
@@ -1148,6 +1173,45 @@ footer {
 
 /* Small devices (smartphones, 480px and down) */
 @media (max-width: 480px) {
+  .modal {
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height to auto */
+    top: 10%; /* Adjust top to bring modal into view */
+    transform: translate(-50%, 0); /* Adjust translate to avoid cutting off the top */
+  }
+
+  .modal__half {
+    width: 100%; /* Full width for modal halves */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .modal__about,
+  .modal__contact {
+    transform: none; /* Reset transform */
+  }
+
+  .modal--open .modal__about,
+  .modal--open .modal__contact {
+    transform: none; /* Reset transform */
+  }
+
+  .modal__title {
+    font-size: 24px; /* Adjust font size */
+  }
+
+  .modal__sub-title {
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .modal__para {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .form__submit {
+    font-size: 16px; /* Adjust font size */
+    padding: 10px 20px; /* Adjust padding */
+  }
+
   .title {
     font-size: 40px; /* Decrease font size */
   }
@@ -1204,7 +1268,7 @@ footer {
   }
 
   .service-card p {
-    font-size: 12px; /* Adjust the font size of the card text */
+    font-size: 24px; /* Adjust the font size of the card text */
   }
 
   .shape {
@@ -1216,6 +1280,7 @@ footer {
 @media (max-width: 360px) {
   .title {
     font-size: 30px; /* Decrease font size */
+    text-align: center;
   }
 
   .header__para {
@@ -1253,295 +1318,20 @@ footer {
   .shape {
     display: none; /* Hide shapes for better readability */
   }
-}
-/* Combined media queries */
 
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
-  .modal {
-    width: 90%; /* Ensure modal width is within viewport */
-    max-width: 90%; /* Ensure modal width is within viewport */
-    height: auto; /* Adjust height to auto */
-    top: 10%; /* Adjust top to bring modal into view */
-    transform: translate(-50%, 0); /* Adjust translate to avoid cutting off the top */
-  }
-  
-  .modal__half {
-    width: 100%; /* Full width for modal halves */
-    padding: 20px; /* Adjust padding */
-    transform: none; /* Reset transform */
-  }
-  
-  .modal__about,
-  .modal__contact {
-    transform: none; /* Reset transform */
-  }
-  
-  .modal--open .modal__about,
-  .modal--open .modal__contact {
-    transform: none; /* Reset transform */
-  }
-  .title {
-    font-size: 80px; /* Decrease font size */
-  }
-
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: static; /* Change to static to prevent absolute positioning issues */
-    transform: none; /* Remove transform */
-    padding: 20px; /* Add padding for spacing */
-    gap: 20px; /* Add gap between content */
-  }
-
-  .header__content {
-    order: 2; /* Content appears below the image */
-  }
-
-  .header__image {
-    order: 1; /* Image appears above the content */
-    margin-bottom: 20px; /* Add space between image and content */
-    width: 100%; /* Ensure it doesn't exceed container width */
-    text-align: center;
-  }
-
-  .header__image img {
-    max-width: 200px; /* Adjust image size */
-    width: 100%; /* Ensure the image scales with container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Keep the image round */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
-  }
-
-  .header__para {
-    font-size: 35px; /* Decrease font size */
-    text-align: left;
-  }
-
-  .social__list {
-    font-size: 40px;
-  }
-
-  .service-card {
-    flex-basis: 100%; /* one card per row on smaller screens */
-  }
-
-  section {
-    padding: 15px;
-    margin: 15px;
-  }
-
-  .section__title {
-    font-size: 36px; /* Adjust the font size for the section title */
-    text-align: center; /* Center the title text */
-  }
-
-  .section__paragraph {
-    font-size: 16px; /* Adjust the font size for the paragraph */
-    text-align: center; /* Center the paragraph text */
-    padding: 0 15px; /* Add padding for better readability */
-  }
-
-  .card-container {
-    flex-direction: column; /* Stack the cards vertically */
-    align-items: center; /* Center the cards */
-  }
-
-  .service-card {
-    width: 80%; /* Adjust the width of the cards */
-    margin-bottom: 20px; /* Add space between the cards */
-  }
-
-  .service-card h3 {
-    font-size: 24px; /* Adjust the font size of the card titles */
-  }
-
-  .service-card p {
-    font-size: 14px; /* Adjust the font size of the card text */
-  }
-
-  .shape {
-    display: none; /* Hide shapes for better readability */
-  }
-  .modal {
-    width: 90%; /* Ensure modal width is within viewport */
-    max-width: 90%; /* Ensure modal width is within viewport */
-    height: auto; /* Adjust height to auto */
-    flex-direction: column; /* Stack modal halves vertically */
-  }
-  
-  .modal__half {
-    width: 100%; /* Full width for modal halves */
-    padding: 20px; /* Adjust padding */
-    transform: none; /* Reset transform */
-  }
-  
-  .modal__about,
-  .modal__contact {
-    transform: none; /* Reset transform */
-  }
-  
-  .modal--open .modal__about,
-  .modal--open .modal__contact {
-    transform: none; /* Reset transform */
-  }
-}
-
-/* Small devices (smartphones, 480px and down) */
-@media (max-width: 480px) {
-  .modal {
-    width: 100%; /* Full width */
-    height: auto; /* Adjust height to auto */
-    top: 10%; /* Adjust top to bring modal into view */
-    transform: translate(-50%, 0); /* Adjust translate to avoid cutting off the top */
-  }
-  
-  .modal__half {
-    width: 100%; /* Full width for modal halves */
-    padding: 10px; /* Adjust padding */
-  }
-  
-  .modal__about,
-  .modal__contact {
-    transform: none; /* Reset transform */
-  }
-  
-  .modal--open .modal__about,
-  .modal--open .modal__contact {
-    transform: none; /* Reset transform */
-  }
-  
-  .modal__title {
-    font-size: 24px; /* Adjust font size */
-  }
-  
-  .modal__sub-title {
-    font-size: 12px; /* Adjust font size */
-  }
-  
-  .modal__para {
-    font-size: 14px; /* Adjust font size */
-  }
-  
-  .form__submit {
-    font-size: 16px; /* Adjust font size */
-    padding: 10px 20px; /* Adjust padding */
-  }
-  .title {
-    font-size: 50px; /* Decrease font size */
-  }
-
-  .header__para {
-    font-size: 30px; /* Decrease font size */
-    text-align: left;
-  }
-
-  .header__image img {
-    max-width: 200px; /* Adjust image size */
-    width: 100%; /* Ensure the image scales with container */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .nav__link:first-child {
-    display: none;
-  }
-
-  .project__description--para {
-    display: none;
-  }
-
-  .project__description {
-    left: 0;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .project__description--sub-title {
-    margin-bottom: 8px;
-  }
-
-  .modal__half {
-    padding: 40px;
-  }
-
-  .section__title {
-    font-size: 28px; /* Adjust the font size for the section title */
-  }
-
-  .section__paragraph {
-    font-size: 14px; /* Adjust the font size for the paragraph */
-  }
-
-  .service-card {
-    width: 100%; /* Full width for the cards */
-    padding: 10px; /* Add padding for better readability */
-  }
-
-  .service-card h3 {
-    font-size: 20px; /* Adjust the font size of the card titles */
-  }
-
-  .service-card p {
-    font-size: 12px; /* Adjust the font size of the card text */
-  }
-
-  .shape {
-    display: none; /* Hide shapes for better readability */
-  }
-}
-
-/* Very small devices (smartphones, less than 360px) */
-@media (max-width: 360px) {
-  .title {
-    font-size: 40px; /* Decrease font size */
-    text-align: center;
-  }
-
-  .header__para {
-    font-size: 25px; /* Decrease font size */
-    text-align: center;
-    
-  }
   .social__list {
     align-items: center;
     margin: 3rem 0;
     justify-content: space-around;
   }
+
   .social__link {
-    margin-right:0;
-  }
-  .header__image img {
-    max-width: 150px; /* Further adjust image size */
-    width: 100%; /* Ensure the image scales with container */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .section__title {
-    font-size: 24px; /* Adjust the font size for the section title */
-  }
-
-  .section__paragraph {
-    font-size: 12px; /* Adjust the font size for the paragraph */
-  }
-
-  .service-card {
-    width: 100%; /* Full width for the cards */
-    padding: 5px; /* Add padding for better readability */
-  }
-
-  .service-card h3 {
-    font-size: 18px; /* Adjust the font size of the card titles */
+    margin-right: 0;
   }
 
   .service-card p {
-    font-size: 10px; /* Adjust the font size of the card text */
-  }
-
-  .shape {
-    display: none; /* Hide shapes for better readability */
+    font-size: 20px; /* Adjust the font size of the card text */
+    color: black;
   }
 }
 
