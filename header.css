@@ -1,0 +1,38 @@
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 200px;
+  }
+  
+  .header__content,
+  .header__image {
+    flex: 1;
+  }
+  
+  .header__image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header__para {
+    font-size: 22px;
+    line-height: 2;
+    max-width: 450px;
+  }
+  
+  .title {
+    font-size: 60px;
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1;
+  }
+  
+  .orange {
+    color: #f76d57;
+  }
+  

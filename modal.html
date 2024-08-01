@@ -1,0 +1,84 @@
+<div class="modal">
+    <div class="modal__half modal__about">
+      <h3 class="modal__title modal__title--about">About Me</h3>
+      <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer and Designer</h4>
+      <p class="modal__para">
+        I'm a 28-year-old American <b class="orange">frontend software engineer</b> with experience in developing
+        websites, marketing, and designing for <b class="orange">small businesses</b> and <b class="orange">my local
+          community</b>.
+        <br>
+        <br>
+        Currently, I work as the director of marketing for <b class="orange">VITO Fryfilter Inc.</b>. I am always
+        looking to get creative and solve problems.
+        <br>
+        <br>
+        I specialize in <b class="orange">JavaScript</b> and <b class="orange">React</b>, focusing on <b
+          class="orange">Front-end Development</b> and <b class="orange">Design</b> to create seamless and visually
+        appealing user experiences.
+      </p>
+  
+      <div class="modal__languages">
+        <figure class="modal__language">
+          <img class="modal__language--img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+            alt="">
+          <span class="language__name">HTML</span>
+        </figure>
+        <figure class="modal__language">
+          <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+          <span class="language__name">CSS</span>
+        </figure>
+        <figure class="modal__language">
+          <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+            alt="">
+          <span class="language__name">JavaScript</span>
+        </figure>
+        <figure class="modal__language">
+          <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+            alt="">
+          <span class="language__name">React</span>
+        </figure>
+  
+        <figure class="modal__language">
+          <img class="modal__language--img" src="./assets/adobe-photoshop.png" alt="">
+          <span class="language__name">Photoshop</span>
+        </figure>
+        <figure class="modal__language">
+          <img class="modal__language--img" src="./assets/adobe-illustrator.png" alt="">
+          <span class="language__name">Illustrator</span>
+        </figure>
+        <figure class="modal__language">
+          <img class="modal__language--img" src="./assets/adobe-premiere-pro.png" alt="">
+          <span class="language__name">Premier Pro</span>
+        </figure>
+        <figure class="modal__language">
+          <img class="modal__language--img" src="./assets/adobe-after-effects.png" alt="">
+          <span class="language__name">After Effects</span>
+        </figure>
+      </div>
+    </div>
+    <div class="modal__half modal__contact">
+      <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+      <h3 class="modal__title modal__title--contact">
+        Ready to Chat?
+      </h3>
+      <h3 class="modal__sub-title modal__sub-title--contact">
+        I am currently exploring new career opportunities and am eager to bring my skills and experience to an
+        a new team. If you're looking for a dedicated professional ready to make a significant impact, please
+        don't hesitate to reach out. Let's discuss how I can contribute to your success.
+      </h3>
+      <form id="contact__form" onsubmit="contact(event)">
+        <div class="form__item">
+          <label class="form__item--label">Name</label>
+          <input class="input" name="user_name" type="text" required></input>
+        </div>
+        <div class="form__item">
+          <label class="form__item--label">Email</label>
+          <input class="input" name="user_email" type="email" required></input>
+        </div>
+        <div class="form__item">
+          <label class="form__item--label">Message</label>
+          <textarea class="input" name="message" type="text" required></textarea>
+        </div>
+        <button id="contact__submit" class="form
+  

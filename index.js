@@ -63,3 +63,43 @@ function toggleModal() {
 // ServiceID: portfoliowebsite
 
 
+// Function to load HTML files into the main index.html
+function loadHTML(url, elementId) {
+  fetch(url)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(elementId).innerHTML = data;
+    });
+}
+
+// Load HTML parts into the main document
+loadHTML('nav.html', 'nav-include');
+loadHTML('header.html', 'header-include');
+loadHTML('landing-page.html', 'landing-page-include');
+loadHTML('cards.html', 'cards-include'); // Corrected ID and file name
+loadHTML('projects.html', 'projects-include');
+loadHTML('footer.html', 'footer-include');
+loadHTML('modal.html', 'modal-include');
+// Function to apply custom cursors
+function applyCustomCursor() {
+  // Set the default custom cursor
+  document.body.style.cursor = "url('./mouse/cursor1.png'), default";
+
+  // Apply the custom cursor to all elements
+  const allElements = document.querySelectorAll('*');
+  allElements.forEach(element => {
+      element.style.cursor = "url('./mouse/cursor1.png'), default";
+  });
+
+  // Change the cursor on click
+  document.body.addEventListener('mousedown', () => {
+      document.body.classList.add('clicked');
+  });
+
+  document.body.addEventListener('mouseup', () => {
+      document.body.classList.remove('clicked');
+  });
+}
+
+// Apply the cursor when the page loads
+document.addEventListener('DOMContentLoaded', applyCustomCursor);

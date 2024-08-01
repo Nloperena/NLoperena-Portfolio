@@ -9,7 +9,28 @@
   --background-dark: rgba(29, 3, 38, 0.85);
   /* Dark purple with transparency */
   --backdrop-filter-dark: blur(8px);
+  
 }
+
+body {
+  cursor: url('./mouse/cursor1'), default; /* Default spatula cursor */
+}
+
+body.clicked, a.clicked, button.clicked{
+  cursor: url('.//cursor2.png'), none; /* Spatula cursor on click */
+}
+
+a, button {
+  cursor: url('./mouse/cursor1.png'), grab;
+}
+
+
+
+  .outlined-text {
+    color: #ffdd00; /* Make the main text color transparent */
+    -webkit-text-stroke: 00.4rem #ffdd00; /* Apply a yellow stroke to the text */
+    font-weight: bold; /* Optional: Makes the stroke more prominent */
+  }
 
 .dark-theme {
   --background-normal: var(--background-dark);
@@ -42,6 +63,7 @@ section {
   background-color: var(--background-light);
   backdrop-filter: var(--backdrop-filter-light);
   -webkit-backdrop-filter: var(--backdrop-filter-light);
+  border-radius: 3rem;
 }
 
 .dark-theme #landing-page,
@@ -540,17 +562,17 @@ section {
 }
 
 .social__link {
-  background-color: #dc49f0;
+  background-color: #ffffff;
   color: white;
-  padding: 6px;
-  width: 32px;
-  height: 32px;
-  font-size: 14px;
-  margin-right: 12px;
+  padding: 10px;
+  width: 4rem;
+  height: 4rem;
+  /* font-size: 14px; */
+  margin: 3rem 3rem 3rem 0rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  border-radius: 50%;
+  border-radius: 1rem;
 }
 
 .mail__btn {
@@ -719,7 +741,9 @@ nav {
   display: flex;
   flex-wrap: wrap;
 }
-
+.hero_icons{
+  width:4rem;
+}
 .modal__language {
   width: 25%;
   padding: 16px;

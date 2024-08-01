@@ -1,0 +1,36 @@
+/* Navigation Bar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100px;
+  }
+  
+  #personal-logo {
+    width: 100%;
+    height: 50px;
+    filter: invert(0);
+  }
+  
+  .nav__link--list {
+    display: flex;
+  }
+  
+  .nav__link {
+    margin: 0 12px;
+  }
+  
+  .nav__link--anchor {
+    font-size: 16px;
+    color: #242424;
+    font-weight: 700;
+  }
+  
+  .fa-adjust {
+    font-size: 20px;
+  }
+  
