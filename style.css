@@ -311,9 +311,11 @@ textarea:focus {
 }
 
 .section__paragraph {
-  margin-bottom: 20px;
+  text-align: left;
+  margin: 0 0 3rem;
+  padding: 0 25rem 0 0;
   color: #555;
-  font-size: 18px;
+  font-size: 1.5rem;
   line-height: 1.6;
   font-family: 'nobel', sans-serif;
 }
@@ -355,7 +357,12 @@ textarea:focus {
   margin-bottom: 12px;
   text-align: left;
   line-height: 1;
-  font-family: ;
+ ; /* Adjust font size as needed */
+  font-weight: bold; /* Ensure the text is bold for better visibility */
+  background: linear-gradient(45deg, #ff00cc, #3333ff); /* Apply your gradient */
+  -webkit-background-clip: text; /* For Safari and older browsers */
+  background-clip: text; /* Clip the background to the text */
+  color: transparent; /* Make the text itself transparent to show the gradient */
 }
 
 .orange {
@@ -537,7 +544,7 @@ section {
   
 */
 #landing-page {
-  min-height: 100vh;
+  min-height: 95vh;
 }
 
 .header {
@@ -882,10 +889,17 @@ nav {
 */
 
 .section__title {
-  text-align: center;
-  font-size: 48px;
-  margin-bottom: 60px;
+  text-align: left;
+  font-size: 4rem;
+  margin: 4rem 4rem 2rem 0;
+  font-size: 32px; /* Adjust font size as needed */
+  font-weight: bold; /* Ensure the text is bold for better visibility */
+  background: linear-gradient(45deg, #ff00cc, #3333ff); /* Apply your gradient */
+  -webkit-background-clip: text; /* For Safari and older browsers */
+  background-clip: text; /* Clip the background to the text */
+  color: transparent; /* Make the text itself transparent to show the gradient */
 }
+  
 
 .project {
   margin-bottom: 135px;
@@ -1173,7 +1187,7 @@ footer {
 
   .section__paragraph {
     font-size: 16px; /* Adjust the font size for the paragraph */
-    text-align: center; /* Center the paragraph text */
+    text-align: left; /* Center the paragraph text */
     padding: 0 15px; /* Add padding for better readability */
   }
 
@@ -1378,4 +1392,125 @@ footer {
   right: 40px; /* Position it on the right */
   z-index: 100; /* Make sure it stays on top of other elements */
   box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.28);
+}
+.fancy-glass-button {
+  /* Set equal width and height for a round button */
+  width: 50px;
+  height: 50px;
+
+  /* Center text inside the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: #000; /* Black font color */
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1); /* Transparent layer */
+  backdrop-filter: blur(10px); /* Blur effect to blur what's behind the button */
+  -webkit-backdrop-filter: blur(10px); /* Safari Support */
+  border-radius: 50%; /* Fully rounded button */
+  position: relative;
+  overflow: hidden;
+  
+  /* Gradient Border using pseudo-element */
+  border: 2px solid transparent; /* Fallback border */
+  background-image: linear-gradient(white, white), linear-gradient(45deg, #ff00cc, #3333ff);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+
+  /* Shadow and Transition */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  
+  /* Perspective for 3D effect */
+  perspective: 500px;
+}
+
+.fancy-glass-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3); /* Slightly opaque layer */
+  border-radius: 50%; /* Match the border radius of the button */
+  pointer-events: none; /* Prevent interactions with this pseudo-element */
+}
+
+.fancy-glass-button:hover {
+  /* Update shadow and transform on hover for 3D effect */
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px, -5px) rotateX(10deg) rotateY(-10deg);
+}
+
+/* Left Side Hover */
+.fancy-glass-button:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: -15px -15px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 50%; /* Match the border radius of the button */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.fancy-glass-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%; /* Match the border radius of the button */
+  pointer-events: none; /* Prevent interactions with this pseudo-element */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effects for different areas */
+.fancy-glass-button:hover {
+  transform: translateY(-5px);
+}
+
+.fancy-glass-button:hover::after {
+  transform: translate(-5px, -5px);
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.fancy-glass-button:active {
+  transform: translateY(2px);
+}
+.fancy-glass-button i {
+  display: inline-block;
+  font-size: 24px; /* Adjust the size as needed */
+  color: transparent; /* Make text color transparent */
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  background-size: 200%; /* Double the size to allow smooth transition */
+  -webkit-background-clip: text; /* Safari support */
+  background-clip: text;
+  transition: transform 0.6s ease, background-position 0.6s ease; /* Smooth transition for scaling and background movement */
+}
+
+.fancy-glass-button i:hover {
+  transform: scale(1.2); /* Scale the icon by 1.2 times on hover */
+  background-position: 100% 0; /* Optional: Add some background movement for extra effect */
+}
+
+
+
+/* Rotate Gradient Animation */
+@keyframes rotateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
