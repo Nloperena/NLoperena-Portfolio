@@ -357,6 +357,7 @@ textarea:focus {
   margin-bottom: 12px;
   text-align: left;
   line-height: 1;
+  font-family: ;
  ; /* Adjust font size as needed */
   font-weight: bold; /* Ensure the text is bold for better visibility */
   background: linear-gradient(45deg, #ff00cc, #3333ff); /* Apply your gradient */
@@ -1182,7 +1183,7 @@ footer {
 
   .section__title {
     font-size: 36px; /* Adjust the font size for the section title */
-    text-align: center; /* Center the title text */
+    text-align: left; /* Center the title text */
   }
 
   .section__paragraph {
