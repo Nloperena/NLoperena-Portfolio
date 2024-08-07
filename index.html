@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/ofz2nnp.css">
   <script src="https://kit.fontawesome.com/4e3520915f.js" crossorigin="anonymous"></script>
   <script src="index.js"></script>
+  <link rel="stylesheet" href="switch.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
@@ -58,14 +59,17 @@
             link__hover-effect--black
           ">Contact</a>
         </li>
-        <li class="nav__link click" onclick="toggleContrast()">
-          <a href="#" class="
-            nav__link--anchor
-            link__hover-effect
-            link__hover-effect--black
-          "><i class="fas fa-adjust"></i></a>
-        </li>
+
+
+
+        <label class="switch">
+          <input type="checkbox" class="input__check" onchange="toggleContrast()">
+          <span class="slider"></span>
+        </label>
+
       </ul>
+
+
     </nav>
 
     <header class="header">
@@ -122,32 +126,42 @@
   </section>
 
 
-  <section id='about'>
-    <div class='container'>
-      <div class='row'>
-        <h2 class="section__title"><span style="color: #9f51ff;">Who </span>am I?</h2>
-        <p class="section__paragraph">
-          I am a creative professional who solves problems, completes projects, and delivers results. My fascination
-          with media and the art behind it began during my college years. I often pondered questions like, "What makes
-          something beautiful?" and "What is the science behind media?" Over time, I found answers through experience
-          and learning. I started coding in 2019 and have since honed my design skills. My work as a marketer has taught
-          me the importance of simplicity, branding, and convenience in achieving impactful results, and I have
-          integrated these principles into all my projects. Across these industries, I bring my expertise to you.
-        </p>
-        <button class='fancy-glass-button' onclick="toggleModal()">
-          <a href="https://www.linkedin.com/in/nicholas-loperena-022813185/" target="_blank"class="
-          footer__social--link
-          link__hover-effect
-          link__hover-effect--white
-        ">
-        <i class="fab fa-linkedin"></i>
-          </a>
-        </button>
-
-        </button>
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-heading">
+          <h2 class="section__title"><span style="color: #9f51ff;">Who </span>am I?</h2>
+          <p class="section__paragraph">
+            I am an American creative professional who solves problems, completes projects, and delivers results. My fascination
+            with media and the art behind it began during my college years. I often pondered questions like, "What makes
+            something beautiful?" and "What is the science behind how this media makes me feel?" Over time, I found answers through experience
+            and learning.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="./assets/washington.jpg" alt="About Me Image">
+        </div>
+        <div class="about-paragraph">
+          <h2 class="section__title"><span style="color: #9f51ff;">My </span>Journey</h2>
+          <p class="section__paragraph">
+            I started coding in 2019 and have since honed my design skills. My work as a marketer has taught
+            me the importance of simplicity, branding, convenience, and experience in achieving impactful results, and I
+            have integrated these principles into all my projects. Across these industries, I bring my expertise to you.
+          </p>
+        </div>
+        <div class="about-buttons">
+          <button class="fancy-glass-button" onclick="toggleModal()">
+            <a href="https://www.linkedin.com/in/nicholas-loperena-022813185/" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </button>
+        </div>
       </div>
     </div>
   </section>
+  
+  
+  
 
 
   <section id="how-i-can-help">
@@ -157,10 +171,10 @@
           How I Can Help You <span style="color: #9f51ff;">Succeed</span>
         </h1>
         <p class="section__paragraph">
-          With a unique blend of skills in frontend development, design, and digital marketing, I'm well-equipped to
+          <!-- With a unique blend of skills in frontend development, design, and digital marketing, I'm well-equipped to
           help enhance your digital presence. Whether it's creating an engaging website, optimizing marketing
           strategies, or crafting stunning visual content, let's bring your vision to life.
-        </p>
+        </p> -->
         <div class="card-container">
           <div class="service-card">
             <div class="service-icon">🌐</div>
@@ -211,7 +225,7 @@
     <div ID="websiteProjects" class="container">
       <div class="row">
         <h1 class="section__title">
-          Hire Me For Your <span class="orange">Website!</span> 🌎
+          Hire Me For Your <span class="orange">Website!</span>
         </h1>
         <ul class="project__list">
 
@@ -226,22 +240,25 @@
                 <h4 class="project__description--sub-title">
                   Html, CSS, JavaScript, Wordpress, Photoshop, Premier Pro, After Effects
                 </h4>
+
                 <p class="project__description--para">
                   I helped build, wrote the content for, and sourced images for the Furniture Packages USA website. This
                   site showcases their interior design services for vacation rentals in Central Florida. It serves as
                   both a digital portfolio and a lead generation tool, designed to attract property managers and owners
                   by highlighting stylish, budget-conscious furnishing solutions.
                 </p>
+                
                 <div class="project__description--links">
                   <a href="https://furniturepackagesusa.com" target="_blank" class="project__description--link">
                     <img class="social__link" src="./assets/icons/link02.png">
                   </a>
                 </div>
+
               </div>
             </div>
           </li>
           <h1 class="section__title">
-            Let's Get Your <span class="orange">Shop</span> Up and Running! 🛒
+            Real World Tool<span class="orange"> Quiz and Calculator</span> Product Guide
           </h1>
           <li class="project">
             <div class="project__wrapper">
@@ -270,7 +287,7 @@
             </div>
           </li>
           <h1 class="section__title">
-            Get Higher Conversions With Custom <span class="orange">eMailings</span> 📈
+            Get Higher Conversions With Custom <span class="orange">eMailings</span>
           </h1>
           <li class="project">
             <div class="project__wrapper">
@@ -288,6 +305,63 @@
                   most prestigious expo events in the industry. This significant gathering is hosted at Caesar's Palace
                   and features prominent brands, including McDonald's, among others. The email encourages recipients to
                   visit our booth at the event. Sent to over 20,000 franchise operators and owners.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://nloperena.github.io/VITO_Fryfilter--NFLA_2024/" target="_blank"
+                    class="project__description--link">
+                    <img class="social__link" src="./assets/icons/link02.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <h1 class="section__title">
+            My First Store<span class="orange"> Astro Labs LLC</span>
+          </h1>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/AstroLabs-thumb.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+                  Astro Labs LLC
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JS, Photoshop, Premier Pro, After Effects, Webflow
+                </h4>
+                <p class="project__description--para">
+                  This was my first legitmate front to back, value creation project ever. I challenged myself to build a
+                  fully functional store. I did it,
+                  and it it's standing. Since then, I've learned a lot, but I keep this preview here as a piece of my
+                  history. I've since put this store behind me, but it's something to remind me of where I was and
+                  where I am now headed and how far I've come since then.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://nloperena.github.io/VITO_Fryfilter--NFLA_2024/" target="_blank"
+                    class="project__description--link">
+                    <img class="social__link" src="./assets/icons/link02.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <h1 class="section__title">
+            My most current project<span class="orange"> Rivado Enterprises LLC</span>
+          </h1>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/rivadoEnterprisesLLCscreencap.png" class="project__img" alt="">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="project__description--title">
+
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, JS, Photoshop, Webflow
+                </h4>
+                <p class="project__description--para">
+                  A apparel and lifestyle brand for family and pets. Right now we're waiting on product images, and are
+                  adding more departments.
                 </p>
                 <div class="project__description--links">
                   <a href="https://nloperena.github.io/VITO_Fryfilter--NFLA_2024/" target="_blank"
@@ -337,7 +411,7 @@
           link__hover-effect
           link__hover-effect--white
         ">
-            Contact
+            Resume
           </a>
           <a href="./assets/NicholasLoperenaResume.pdf" target="_blank" class="
           footer__social--link

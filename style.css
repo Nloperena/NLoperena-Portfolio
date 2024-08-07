@@ -274,7 +274,7 @@ textarea:focus {
 
 
 .container {
-  padding: 50px 0;
+  padding: 2rem;
   width: 100%;
 }
 
@@ -313,7 +313,7 @@ textarea:focus {
 .section__paragraph {
   text-align: left;
   margin: 0 0 3rem;
-  padding: 0 25rem 0 0;
+  padding: 0 0 0 0;
   color: #555;
   font-size: 1.5rem;
   line-height: 1.6;
@@ -506,7 +506,7 @@ section {
 .section__list--item,
 .title,
 .header__para {
-  color: #333;
+  color: #000000;
   /* Dark text color for readability */
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
   /* Optional: adds a mild white shadow for better legibility */
@@ -559,7 +559,7 @@ section {
 }
 
 .header__para {
-  font-size: 22px;
+  font-size: 1rem;
   line-height: 2;
   max-width: 450px;
 }
@@ -1187,7 +1187,7 @@ footer {
   }
 
   .section__paragraph {
-    font-size: 16px; /* Adjust the font size for the paragraph */
+    font-size: 1.2; /* Adjust the font size for the paragraph */
     text-align: left; /* Center the paragraph text */
     padding: 0 15px; /* Add padding for better readability */
   }
@@ -1299,7 +1299,7 @@ footer {
   }
 
   .section__paragraph {
-    font-size: 14px; /* Adjust the font size for the paragraph */
+    font-size: 1.2REM; /* Adjust the font size for the paragraph */
   }
 
   .service-card {
@@ -1343,7 +1343,7 @@ footer {
   }
 
   .section__paragraph {
-    font-size: 12px; /* Adjust the font size for the paragraph */
+    font-size: 1.2REM; /* Adjust the font size for the paragraph */
   }
 
   .service-card {
@@ -1515,3 +1515,45 @@ footer {
     background-position: 100% 50%;
   }
 }
+.about-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap as needed */
+}
+
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 50%; /* Ensures the text and buttons take up half the page */
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px; /* Adjust this value to align buttons with text if necessary */
+}
+
+.fancy-glass-button {
+  margin-bottom: 10px; /* Space between the buttons */
+}
+
+.about__img--wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 50%; /* Ensures the image takes up half the page */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  max-height: 100%; /* Ensure the image scales properly */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+  border-radius: 10px; /* Optional: Adds a slight curve to the image */
+}
+
