@@ -891,9 +891,8 @@ nav {
 
 .section__title {
   text-align: left;
-  font-size: 4rem;
-  margin: 4rem 4rem 2rem 0;
-  font-size: 32px; /* Adjust font size as needed */
+  font-size: 3.5rem;
+  margin: 2rem 4rem 2rem 0;
   font-weight: bold; /* Ensure the text is bold for better visibility */
   background: linear-gradient(45deg, #ff00cc, #3333ff); /* Apply your gradient */
   -webkit-background-clip: text; /* For Safari and older browsers */
@@ -1184,6 +1183,8 @@ footer {
   .section__title {
     font-size: 36px; /* Adjust the font size for the section title */
     text-align: left; /* Center the title text */
+    margin: 2rem 4rem 2rem 0;
+    font-size: 3rem;
   }
 
   .section__paragraph {
@@ -1541,19 +1542,64 @@ footer {
 .fancy-glass-button {
   margin-bottom: 10px; /* Space between the buttons */
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-.about__img--wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  max-width: 50%; /* Ensures the image takes up half the page */
+.about-grid {
+  gap:4rem;
+  display: flex; /* Use flexbox for the layout */
+  align-items: flex-start; /* Align items at the top */
+  justify-content: space-between; /* Space between text and image */
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.about-heading {
+  flex: 1; /* Takes up equal space with the image */
+  max-width: 600px; /* Optional: Limits the width of the text section */
+}
+
+.about-image {
+  flex: 1; /* Takes up equal space with the text */
+  text-align: right; /* Aligns the image to the right */
 }
 
 .about-image img {
-  width: 100%;
-  height: auto;
-  max-height: 100%; /* Ensure the image scales properly */
-  object-fit: cover; /* Ensure the image covers the space without distortion */
-  border-radius: 10px; /* Optional: Adds a slight curve to the image */
+  max-width: 100%; /* Ensures the image does not overflow its container */
+  height: auto; /* Maintains the image's aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners to the image */
 }
 
+.about-buttons {
+  margin-top: 20px; /* Adds space above the button */
+}
+
+
+
+.fancy-glass-button:hover {
+  background-color: #7a3ccd; /* Darken the button color on hover */
+}
+
+.footer__social--link {
+  color: white;
+  text-decoration: none;
+}
+
+.link__hover-effect:hover {
+  color: #d4d4d4;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column; /* Stacks the elements vertically */
+    align-items: center; /* Center-aligns the content */
+  }
+
+  .about-image {
+    text-align: center; /* Centers the image */
+    margin-top: 20px; /* Adds space above the image */
+  }
+}
